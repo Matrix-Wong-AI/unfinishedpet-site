@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="未完兽支持页面：获取使用说明、常见问题、反馈邮箱和隐私政策入口。" />
+  <title>未完兽支持</title>
+  <style>
+    :root {
+      --paper: #f6f6f2;
+      --ink: #111;
+      --muted: #5f5f5a;
+      --line: rgba(17, 17, 17, .18);
+      --accent: #45ff2f;
+      --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.72;
+    }
+    main {
+      width: min(820px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+    h1, h2, p, li, a { font-weight: 400; letter-spacing: 0; }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 20px;
+    }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 20px; }
+    a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    .mark {
+      width: 32px;
+      height: 24px;
+      background:
+        linear-gradient(var(--ink), var(--ink)) 0 0 / 12px 12px no-repeat,
+        linear-gradient(var(--ink), var(--ink)) 12px 10px / 12px 12px no-repeat,
+        linear-gradient(var(--accent), var(--accent)) 24px 0 / 8px 12px no-repeat;
+      image-rendering: pixelated;
+    }
+    .muted { color: var(--muted); }
+    .panel {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.42);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand"><span class="mark"></span><span>Unfinished Pet</span></div>
+    <h1>未完兽支持</h1>
+    <p class="muted">未完兽是一只住在 macOS 菜单栏里的桌面待办宠物，用来记录任务、设置本地提醒，并在全部完成后进入休息状态。</p>
+
+    <section class="panel">
+      <p>反馈邮箱：<a href="mailto:444379237@qq.com">444379237@qq.com</a></p>
+      <p>隐私政策：<a href="./privacy.html">查看未完兽隐私政策</a></p>
+    </section>
+
+    <h2>常见问题</h2>
+    <ul>
+      <li>如何新增任务：点击菜单栏图标，选择快速新增任务，或打开今日口袋后输入任务。</li>
+      <li>如何设置提醒：在任务里输入明确时间，例如“今天 18:30 提交方案”，未完兽会识别并创建本地提醒。</li>
+      <li>为什么没有收到提醒：请在 macOS 系统设置里允许未完兽发送通知。</li>
+      <li>桌宠不见了怎么办：点击菜单栏图标，选择“把宠物叫回来”。</li>
+      <li>任务数据保存在哪里：当前版本只保存在本机，不需要登录账号。</li>
+    </ul>
+
+    <h2>当前版本</h2>
+    <p>1.0.0</p>
+
+    <h2>系统要求</h2>
+    <p>macOS 14.0 或更高版本。</p>
+
+    <h2>联系反馈</h2>
+    <p>如果你遇到崩溃、提醒失效、任务丢失或窗口找不到等问题，请发送邮件到 <a href="mailto:444379237@qq.com">444379237@qq.com</a>，并尽量附上 macOS 版本、App 版本和复现步骤。</p>
+  </main>
+</body>
+</html>
+
