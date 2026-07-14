@@ -158,6 +158,21 @@
       gap: 10px;
     }
 
+    .support-link {
+      height: 31px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1.5px solid var(--line);
+      font-size: var(--fs-xs);
+      white-space: nowrap;
+    }
+
+    .support-link:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
     .lang-toggle {
       height: 31px;
       padding: 0 10px;
@@ -891,9 +906,13 @@
       .todo-panel { right: 12px; width: 270px; }
       .pet-zone { left: 22px; }
       .explain-item { grid-template-columns: 1fr; gap: 5px; }
-      .global-download { grid-template-columns: 1fr; height: 52px; }
-      .global-download span { display: flex; }
-      .global-download a { display: none; }
+      .global-download { grid-template-columns: 1fr 152px; height: 52px; }
+      .global-download span { display: none; }
+      .global-download a {
+        display: grid;
+        grid-column: 1 / -1;
+        border-left: 0;
+      }
     }
   </style>
 </head>
@@ -907,6 +926,7 @@
         </span>
       </a>
       <div class="nav-actions">
+        <a class="support-link" href="./support.html" data-i18n="supportCta">查看支持 ↗</a>
         <button class="lang-toggle" type="button" id="langToggle">EN</button>
       </div>
     </nav>
@@ -1007,8 +1027,8 @@
     </section>
   </main>
   <div class="global-download">
-    <span data-i18n="globalText">Mac App Store 即将上线 · 本地优先 · 不需要登录</span>
-    <a href="./support.html" data-i18n="globalCta">查看支持 ↗</a>
+    <span data-i18n="globalText">Mac App Store 已上线 · 本地优先 · 不需要登录</span>
+    <a href="https://apps.apple.com/app/id6788753544" target="_blank" rel="noopener noreferrer" data-i18n="globalCta">下载 Mac 端 App ↗</a>
   </div>
   <script>
     const copy = {
@@ -1032,8 +1052,9 @@
         state2: "抱纸片 · 当前任务",
         state3: "红点 · 已逾期",
         state4: "趴下 · 今天清空",
-        globalText: "Mac App Store 即将上线 · 本地优先 · 不需要登录",
-        globalCta: "查看支持 ↗",
+        supportCta: "查看支持 ↗",
+        globalText: "Mac App Store 已上线 · 本地优先 · 不需要登录",
+        globalCta: "下载 Mac 端 App ↗",
         reserve: ""
       },
       en: {
@@ -1056,8 +1077,9 @@
         state2: "paper · current",
         state3: "red dot · overdue",
         state4: "resting · clear",
-        globalText: "Mac App Store soon · local-first · no login required",
-        globalCta: "Support ↗",
+        supportCta: "Support ↗",
+        globalText: "Now on the Mac App Store · local-first · no login required",
+        globalCta: "Download for Mac ↗",
         reserve: ""
       }
     };
